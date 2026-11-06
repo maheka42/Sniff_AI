@@ -121,6 +121,17 @@ Sniff_AI/
 
 The application source, dependency manifest, README, and `.gitignore` are committed. The trained `target_model.pkl` binary is not yet in this repository; export it from the training notebook and add it beside `app.py` before running or deploying the application.
 
+## Export the trained model from Google Colab
+
+The model binary is not stored in this repository yet. In the Colab notebook where `target_model` was trained, run:
+
+```python
+import joblib
+joblib.dump(target_model, "target_model.pkl")
+```
+
+Download `target_model.pkl` from the Colab Files panel and add it to the repository beside `app.py`. The application loads this file at startup. Do not upload the full training CSV unless you have a clear reason and permission to redistribute it.
+
 ## Run locally
 
 Python 3.10 or 3.11 is a practical starting point for the RDKit/scikit-learn stack. Create a virtual environment, then install:
