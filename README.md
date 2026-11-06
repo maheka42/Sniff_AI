@@ -8,7 +8,7 @@ The project combines cheminformatics, classical machine learning, and an interac
 
 ## Demo
 
-The interactive prototype was developed in Google Colab and launched with Gradio. A Colab-generated public link is temporary and only works while its runtime is active. A persistent hosted demo can be deployed with Hugging Face Spaces after the application and trained model artifact are added to this repository.
+The Gradio application source is included as `app.py`. The trained model artifact (`target_model.pkl`) must also be placed beside `app.py` before the repository can run or be deployed. The original Colab-generated public link is temporary and only works while its runtime is active. A persistent hosted demo can be deployed with Hugging Face Spaces once the model artifact is added.
 
 ## Features
 
@@ -119,7 +119,7 @@ Sniff_AI/
     └── architecture.png   # Optional architecture illustration
 ```
 
-The current repository documentation and dependency manifest are committed first. The model artifact and application source still need to be added from the working Colab notebook before this repository is independently runnable.
+The application source, dependency manifest, README, and `.gitignore` are committed. The trained `target_model.pkl` binary is not yet in this repository; export it from the training notebook and add it beside `app.py` before running or deploying the application.
 
 ## Run locally
 
@@ -135,7 +135,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-After `app.py` and `target_model.pkl` have been added, launch:
+After `target_model.pkl` has been added beside the committed `app.py`, launch:
 
 ```bash
 python app.py
